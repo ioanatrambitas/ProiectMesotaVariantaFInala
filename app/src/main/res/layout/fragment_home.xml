@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/text_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitStart"
+                android:src="@drawable/acasa1" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Prezentarea Colegiului
+ &#xA; Vă invităm să fiţi alături de noi şi, în calitate de oaspeţi, să ne urmaţi prin şcoala noastră.
+"   android:textSize="20dp"
+                android:textColor="#0ad"
+                android:textStyle="italic"
+                android:background="#fb9"
+                android:id="@+id/acasa_id11"
+                />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitStart"
+                android:src="@drawable/acasa2" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Eveniment 150 de ani de excelență
+
+ &#xA;Volum aniversar 150 de ani de existență- un volum coordonat de prof. Evelina Cîrciu și de prof. Ovidiu Tripsa, directorul instituției, ce încununează tradiția a 150 de ani de istorie meșotistă și care face referiri la cele mai importante etape din istoria școlii noastre. Este un tablou retrospectiv care a luat naștere și din amintirile tuturor dascălilor sau elevilor acestui locaș. Va invităm așadar să-l parcurgeți.
+           &#xA; (Prețul volumului este de 80 lei și poate fi obținut de la d-na laborantă Ispas Cătălina"
+                android:textSize="20dp"
+                android:background="#fb9"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  Multumim doamnei profesoare Georgiana Stoianovici pentru realizarea filmului aniversar (sursa YouTube)"
+                android:textSize="20dp"
+                android:background="#fb9"
+                android:textStyle="italic"
+                android:textColor="#0ad"
+                android:id="@+id/acasa_id21"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="  Aniversaţi cu un ministru. „Meşotă”, 150 de ani, trei zile de sărbătoare"
+                android:textSize="20dp"
+                android:background="#fb9"
+                android:textStyle="italic"
+                android:textColor="#0ad"
+                android:id="@+id/acasa_id22"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" Spectacolul scolii 07.06.2019"
+                android:textSize="20dp"
+                android:background="#fb9"
+                android:textStyle="italic"
+                android:textColor="#0ad"
+                android:id="@+id/acasa_id23"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               android:text=" Vă mulțumim pentru participarea la marea reuniune meșotistă prilejuită de împlinirea a 150 de ani de la înființarea de către profesorul Dr. Ioan Meșotă a Şcolii Reale din Brașov "
+                android:textSize="20dp"
+                android:background="#fb9"
+
+                />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitStart"
+                android:src="@drawable/acasa3"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Olimpiada de astronomie și astrofizică / Olimpiada de limbi clasice - Etapa judeţeană"
+                android:textSize="20dp"
+                android:background="#fb9"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" Astronomie şi astrofizică
+&#xA;Rezultatele olimpiadei de astronomie și astrofizică, etapa județeană, înainte de contestații"
+                android:textSize="20dp"
+                android:background="#fb9"
+                android:textStyle="italic"
+                android:textColor="#0ad"
+                android:id="@+id/acasa_id31"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Limbi clasice
+&#xA; Rezultatele finale ale olimpiadei de limbi clasice"
+                android:textSize="20dp"
+                android:background="#fb9"
+                android:textStyle="italic"
+                android:textColor="#0ad"
+                android:id="@+id/acasa_id32"
+                />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitStart"
+                android:src="@drawable/acasa4"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+android:text="&#xA; 30 ianuarie - Ziua Colegiului Național Dr. Ioan Meșotă
+&#xA; INVITAŢIE
+Cu ocazia împlinirii a 151 de ani de istorie și de performanţă, profesorii și elevii Colegiului ,,Dr. Ioan Meșotă” au deosebita onoare de a vă invita să luaţi parte la festivitatea prilejuită de ziua școlii lor. ...."
+            android:textSize="20dp"
+                android:background="#fb9"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vrei mai mult? Click aici!>>>"
+                android:textSize="20dp"
+                android:background="#fb9"
+                android:textStyle="italic"
+                android:linksClickable="true"
+                android:textColor="#0ad"
+                android:id="@+id/acasa_id41"
+                />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitStart"
+                android:src="@drawable/acasa5"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="30 Years of Freedom
+&#xA; Luna decembrie a anului 2019 marchează comemorarea evenimentelor istorice de acum trei decenii: Revoluția Anticomunistă. Căderea comunismului ..."
+                android:textSize="20dp"
+                android:background="#fb9"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vrei mai mult? Click aici!>>>"
+                android:textSize="20dp"
+                android:background="#fb9"
+                android:textStyle="italic"
+                android:textColor="#0ad"
+                android:id="@+id/acasa_id51"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

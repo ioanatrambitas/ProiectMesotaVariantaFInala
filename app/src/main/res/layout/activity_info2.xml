@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.Info2">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitStart"
+                android:src="@drawable/acasa5"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" 30 Years of Freedom"
+                android:textSize="30dp"
+                android:background="#fb9"
+                android:textStyle="bold"
+                android:textColor="#0ad"
+
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" Luna decembrie a anului 2019 marchează comemorarea evenimentelor istorice de acum trei decenii: Revoluția Anticomunistă. Căderea comunismului și cei treizeci de ani de libertate au fost două aspecte analizate de elevi din diferite colțuri ale țării la îndemnul Ambasadei Regatului Unit din România și a British Council Romania. Tinerii au fost încurajați să exploreze mesajul Romania Can do it! și tematica Revoluției din decembrie 1989 în cadrul conferinței 30 Years of Freedom printr-o serie de proiecte creative multimedia (video, grafică/poster, muzică, etc.), urmând ca propunerile cele mai expresive să fie prezentate în cadrul conferinței, în fața unei audiențe care a inclus personalități ale vieții culturale și politice din România și Marea Britanie.
+Colegiul nostru a fost onorat de invitația Ambasadei britanice și a decis să realizeze un scurtmetraj intitulat Per Aspera ad Libertatem/Through Hardships Towards Freedom. Dorința noastră a fost să scoatem în evidență beneficiile democrației, toleranței și libertății deseori neglijate de oamenii din lumea contemporană, punând în prim-plan raportul dintre aceste aspecte și noi, dar mai ales impactul pe care îl au în viața de zi cu zi. Proiectul echipei meșotiste (Roberto-Davide Casalino, Mihai Mihăiescu, Ana Neculicioiu, Natalia Ștefăniță, Cassandra Atanasiu și Timea Dinu, coordonați de d-na profesoară Ana-Maria Csiki) a fost selectat pentru a fi prezentat în cadrul evenimentului.
+Miercuri, 18 decembrie, Biblioteca Centrală Universitară ,,Carol I” din București a fost gazda conferinței în cadrul căreia au fost ecranizate proiectele și au luat cuvântul diferite personalități ale lumii britanice și românești, moderator fiind Ambasadorul Majestății Sale, Andrew Noble. Printre invitații la conferință s-au numărat prof. univ. dr. Bogdan Murgescu, cadru didactic la Facultatea de Istorie a Universității din București, Irina Margareta Nistor, critic de film, John Simpson, editor BBC, Ion Caramitru, directorul Teatrului Național din București și prof. Dennis Deletant, profesor invitat al Catedrei de studii românești „Ion Raţiu“ de la Universitatea Georgetown din Washington, DC. Fiecare a oferit o perspectiva personală asupra Revoluției și a momentelor istorice la care au fost martori, respectiv ce impact au avut acestea asupra lor.
+Întreaga experiență, de la etapa de documentare până la prezentarea proiectului, ne-a ajutat să conștientizăm mai bine importanța trecutului tumultuos al propriului popor, faptul că au existat oameni incredibil de curajoși care au luptat pentru ce au crezut și au facut numeroase sacrificii pentru a apăra onoarea țării și drepturile cetățenești. Libertățile câștigate nu reprezintă pentru noi doar niște privilegii de care beneficiem inconștient și nelimitat, ci substratul tuturor lucrurilor ce stau la baza fericirii noastre. În ziua de astăzi suntem liberi să ne ilustrăm propriile gânduri, transpunându-le pe coala de hârtie sau pe pânza de pictură. Suntem liberi să citim literatură de orice fel, să devorăm toate cărțile de care dispunem și să avem părerea proprie despre viață, despre lumea în care trăim. Suntem liberi să ne imaginam, să fim creativi, să scriem despre orice ne fulgeră mintea, făcând ideile noastre vizibile pentru publicul mereu dornic de ceva inedit. Suntem liberi să studiem în afara țării, dispunând de toate posibilitățile necesare și având aceleași drepturi ca orice alt cetățean ce pleacă de acasă cu un bagaj într-o mână și un vis măreț în cealaltă. Suntem liberi să facem orice ne propunem, având puterea de a sări peste orice obstacol ne iese in cale. Suntem liberi să fim noi înșine. Putem trăi cu adevărat, putem arăta fără rușine cine suntem și putem explora lumea în orice colț al ei, pentru că SUNTEM LIBERI.
+(Ana N., clasa a XI-a A)
+
+"
+
+                android:textSize="20dp"
+                android:background="#fb9"
+                />
+
+
+
+
+        </LinearLayout>>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

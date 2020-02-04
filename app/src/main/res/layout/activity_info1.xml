@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.Info1"
+    >
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="MissingConstraints">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitStart"
+        android:src="@drawable/acasa4"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="  30 ianuarie - Ziua Colegiului Național Dr. Ioan Meșotă
+&#xA; INVITAŢIE "
+        android:textSize="30dp"
+        android:background="#fb9"
+        android:textStyle="bold"
+        android:textColor="#0ad"
+
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Cu ocazia împlinirii a 151 de ani de istorie și de performanţă, profesorii și elevii Colegiului ,,Dr. Ioan Meșotă” au deosebita onoare de a vă invita să luaţi parte la festivitatea prilejuită de ziua școlii lor. Ziua Colegiului înseamnă pentru toţi meșotiștii reafirmarea profilului identitar, omagierea întemeietorilor și înaintașilor, a tuturor celor care, desenând direcţiile de dezvoltare ale acestei instituţii, i-au asigurat temelii solide, un nume și un renume. În descendenţa unei tradiţii care acţionează și astăzi catalizator, ne bucurăm să ne exprimăm credinţa în calitatea educaţiei, în importanţa solidarităţii intelectuale, a tenacităţii, demnităţii, a vigorii spirituale și suntem mândri să celebrăm acele valori statornice, autentice prin care fiecare poate aduce o schimbare în propria-i viaţă și în lumea în care trăiește. Serbarea dedicată evenimentului va avea loc în data de 30 ianuarie a.c., la ora 10, în Sala festivă a colegiului.
+Cu respect,
+Ovidiu- Florin Tripșa,
+director al Colegiului Naţional ,,Dr. Ioan Meșotă” din Brașov"
+
+        android:textSize="20dp"
+        android:background="#fb9"
+        />
+
+
+
+
+</LinearLayout>>
+</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
