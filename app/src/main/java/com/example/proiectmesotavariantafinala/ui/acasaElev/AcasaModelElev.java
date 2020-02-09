@@ -1,16 +1,16 @@
-package com.example.proiectmesotavariantafinala.ui.gallery;
+package com.example.proiectmesotavariantafinala.ui.acasaElev;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class GalleryViewModel extends ViewModel {
+public class AcasaModelElev extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public GalleryViewModel() {
+    public AcasaModelElev() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is gallery fragment");
+        mText.setValue("This is home fragment");
     }
 
     public LiveData<String> getText() {

@@ -1,4 +1,4 @@
-package com.example.proiectmesotavariantafinala.ui.tools;
+package com.example.proiectmesotavariantafinala.ui.uploadElev;
 
 import android.Manifest;
 import android.app.ProgressDialog;
@@ -10,7 +10,9 @@ import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,7 +21,6 @@ import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.proiectmesotavariantafinala.R;
@@ -27,19 +28,22 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
-import org.w3c.dom.Text;
+import java.util.ArrayList;
 
 import static android.app.Activity.RESULT_OK;
 import static android.widget.Toast.makeText;
 
-public class ToolsFragment extends Fragment {
+public class UploadFragmentElev extends Fragment {
 
     Button selectFile, upload;
     TextView notification;
@@ -50,14 +54,32 @@ public class ToolsFragment extends Fragment {
     FirebaseDatabase database; // pentru memorare adresa fisier
     ProgressDialog progressDialog;
 
+    Spinner spinner;
+    String string="";
+    ValueEventListener listener;
+    DatabaseReference databaseReference;
+    ArrayAdapter <String> arrayAdapter;
+    ArrayList <String> arrayList;
+
+
     private ToolsViewModel toolsViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         toolsViewModel =
                 ViewModelProviders.of(this).get(ToolsViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_tools, container, false);
+        View root = inflater.inflate(R.layout.fragment_elev_upload, container, false);
 
+        spinner=root.findViewById(R.id.spinnerUpload);
+        databaseReference= FirebaseDatabase.getInstance().getReference("Elevi").child("Materii");
+        arrayList=new ArrayList<>();
+
+        arrayAdapter=new ArrayAdapter<String>(getContext(),
+                android.R.layout.simple_list_item_1,arrayList);
+
+        functiaSetSpinner();
+
+        spinner.setAdapter(arrayAdapter);
 
         storage = FirebaseStorage.getInstance(); //returneaza un obiect Firebase Storage
         database = FirebaseDatabase.getInstance(); // returneaza un obiect Firebase Databse
@@ -100,14 +122,14 @@ public class ToolsFragment extends Fragment {
 
                 final String fileName =System.currentTimeMillis()+"";
                 final String fileNameFinal=nume.getText().toString()+"-"+fileName;
-
+                string=spinner.getSelectedItem().toString().trim();
 
                 //    StorageReference reference =  storage.child("uploads/"+System.currentTimeMillis()+".pdf");
 
                 //      StorageReference storageReference = storage.getRFeference();
                 final StorageReference storageReference = storage.getReference();
 
-                storageReference.child("Teme").child(fileNameFinal).putFile(pdfUri)
+                storageReference.child("Teme").child(string).child(fileNameFinal).putFile(pdfUri)
                         .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                             @Override
                             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
@@ -120,7 +142,7 @@ public class ToolsFragment extends Fragment {
 
                                 // Map<String,String> doc = new HashMap<>();
                                 //  doc.put("url", url);
-                                reference.child("Teme").child(fileNameFinal).setValue(url).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                reference.child("Teme").child(string).child(fileNameFinal).setValue(url).addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
                                         if(task.isSuccessful())
@@ -131,8 +153,8 @@ public class ToolsFragment extends Fragment {
 
                                     }
                                 });
-                                 //  startActivity(new Intent(this,ToolsFragment.class));
-                                 //        Intent intent = new Intent(getContext(), ToolsFragment.class);
+                                 //  startActivity(new Intent(this,UploadFragmentElev.class));
+                                 //        Intent intent = new Intent(getContext(), UploadFragmentElev.class);
                                  //       startActivity(intent);
                             }
                         }).addOnFailureListener(new OnFailureListener() {
@@ -158,6 +180,7 @@ public class ToolsFragment extends Fragment {
                                 }
                             }, 5000);
                             notification.setText("Alegeti alt fisier");
+                            nume.setText("");
                             stergeUri();
 
                            Uri pdfUri = null;
@@ -220,7 +243,25 @@ private void stergeUri()
 
 
     }
+    public void functiaSetSpinner(){
+        listener =  databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for(DataSnapshot item:dataSnapshot.getChildren()){
 
+                    arrayList.add(item.getValue().toString());
+                }
+                arrayAdapter.notifyDataSetChanged();
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+    }
 
 
 }

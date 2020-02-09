@@ -4,10 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,8 +13,6 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.proiectmesotavariantafinala.MainActivity;
-import com.example.proiectmesotavariantafinala.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -30,7 +26,8 @@ public class Logare extends AppCompatActivity {
     TextView mCreateBtn;
     ProgressBar progressBar;
     FirebaseAuth fAuth;
-
+    Button btnProf;
+    EditText editTextProf;
 
 
     @Override
@@ -45,6 +42,9 @@ public class Logare extends AppCompatActivity {
         fAuth = FirebaseAuth.getInstance();
         mLoginBtn = findViewById(R.id.buttonLog);
         mCreateBtn = findViewById(R.id.textView2);
+        editTextProf=findViewById(R.id.editTextProf);
+        btnProf=findViewById(R.id.btnAutProf);
+
 
         mLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,7 +81,7 @@ public class Logare extends AppCompatActivity {
                         {
                             Toast.makeText(Logare.this, "Utilizator logat cu succes!", Toast.LENGTH_SHORT).show();
 
-                            startActivity(new Intent(getApplicationContext(), Principal.class));
+                            startActivity(new Intent(getApplicationContext(), InterfataElev.class));
                         } else {
                             Toast.makeText(Logare.this, "Eroare!" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
 
@@ -97,10 +97,27 @@ public class Logare extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                 startActivity(new Intent(getApplicationContext(), InterfataProfesor.class));
             }
         });
 
+
+    }
+
+    public void autProf(View view) {
+        String codAcces=editTextProf.getText().toString();
+
+        if(equals(codAcces)==equals("T1i2f92m07"))
+            startActivity(new Intent(getApplicationContext(), InterfataProfesor.class));
+        else {
+            Toast.makeText(Logare.this, "Cod de acces incorect!", Toast.LENGTH_SHORT).show();
+editTextProf.setText("");
+        }
+    }
+
+    public void vizibilitateProf(View view) {
+        btnProf.setVisibility(View.VISIBLE);
+        editTextProf.setVisibility(View.VISIBLE);
 
     }
 }

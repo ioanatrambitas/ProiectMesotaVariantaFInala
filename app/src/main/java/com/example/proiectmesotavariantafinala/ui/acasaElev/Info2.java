@@ -1,4 +1,4 @@
-package com.example.proiectmesotavariantafinala.ui.home;
+package com.example.proiectmesotavariantafinala.ui.acasaElev;
 
 import androidx.appcompat.app.AppCompatActivity;
 

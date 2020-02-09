@@ -14,23 +14,14 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-            <TextView
-                android:id="@+id/text_home"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:textAlignment="center"
-                android:textSize="20sp" />
-
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
                 android:scaleType="fitStart"
-                android:src="@drawable/acasa1" />
+                android:src="@drawable/acasa1"
+                />
 
             <TextView
                 android:layout_width="match_parent"
@@ -38,11 +29,41 @@
                 android:text="Prezentarea Colegiului
  &#xA; Vă invităm să fiţi alături de noi şi, în calitate de oaspeţi, să ne urmaţi prin şcoala noastră.
 "   android:textSize="20dp"
-                android:textColor="#0ad"
+
                 android:textStyle="italic"
                 android:background="#fb9"
+                android:autoLink="web"
                 android:id="@+id/acasa_id11"
+
+                android:linksClickable="true"
                 />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitStart"
+                android:src="@drawable/acasa4" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fb9"
+                android:text="&#xA; 30 ianuarie - Ziua Colegiului Național Dr. Ioan Meșotă
+&#xA; INVITAŢIE
+Cu ocazia împlinirii a 151 de ani de istorie și de performanţă, profesorii și elevii Colegiului ,,Dr. Ioan Meșotă” au deosebita onoare de a vă invita să luaţi parte la festivitatea prilejuită de ziua școlii lor. ...."
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/acasa_id41"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fb9"
+                android:linksClickable="true"
+                android:text="Citește mai mult! Click aici!>>>"
+                android:textColor="#009688"
+                android:textSize="20dp"
+                android:textStyle="italic"/>
 
             <ImageView
                 android:layout_width="match_parent"
@@ -68,7 +89,7 @@
                 android:textSize="20dp"
                 android:background="#fb9"
                 android:textStyle="italic"
-                android:textColor="#0ad"
+                android:textColor="#009688"
                 android:id="@+id/acasa_id21"
                 />
 
@@ -79,7 +100,7 @@
                 android:textSize="20dp"
                 android:background="#fb9"
                 android:textStyle="italic"
-                android:textColor="#0ad"
+                android:textColor="#009688"
                 android:id="@+id/acasa_id22"
                 />
 
@@ -90,7 +111,7 @@
                 android:textSize="20dp"
                 android:background="#fb9"
                 android:textStyle="italic"
-                android:textColor="#0ad"
+                android:textColor="#009688"
                 android:id="@+id/acasa_id23"
                 />
             <TextView
@@ -128,7 +149,7 @@
                 android:textSize="20dp"
                 android:background="#fb9"
                 android:textStyle="italic"
-                android:textColor="#0ad"
+                android:textColor="#009688"
                 android:id="@+id/acasa_id31"
                 />
 
@@ -140,38 +161,8 @@
                 android:textSize="20dp"
                 android:background="#fb9"
                 android:textStyle="italic"
-                android:textColor="#0ad"
+                android:textColor="#009688"
                 android:id="@+id/acasa_id32"
-                />
-
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:scaleType="fitStart"
-                android:src="@drawable/acasa4"
-                />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-android:text="&#xA; 30 ianuarie - Ziua Colegiului Național Dr. Ioan Meșotă
-&#xA; INVITAŢIE
-Cu ocazia împlinirii a 151 de ani de istorie și de performanţă, profesorii și elevii Colegiului ,,Dr. Ioan Meșotă” au deosebita onoare de a vă invita să luaţi parte la festivitatea prilejuită de ziua școlii lor. ...."
-            android:textSize="20dp"
-                android:background="#fb9"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Vrei mai mult? Click aici!>>>"
-                android:textSize="20dp"
-                android:background="#fb9"
-                android:textStyle="italic"
-                android:linksClickable="true"
-                android:textColor="#0ad"
-                android:id="@+id/acasa_id41"
                 />
 
 
@@ -194,11 +185,11 @@ Cu ocazia împlinirii a 151 de ani de istorie și de performanţă, profesorii �
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Vrei mai mult? Click aici!>>>"
+                android:text="Citește mai mult! Click aici!>>>"
                 android:textSize="20dp"
                 android:background="#fb9"
                 android:textStyle="italic"
-                android:textColor="#0ad"
+                android:textColor="#009688"
                 android:id="@+id/acasa_id51"
                 />
 

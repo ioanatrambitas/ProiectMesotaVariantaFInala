@@ -1,4 +1,4 @@
-package com.example.proiectmesotavariantafinala.ui.send;
+package com.example.proiectmesotavariantafinala.ui.sendElev;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,15 +14,15 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.proiectmesotavariantafinala.R;
 
-public class SendFragment extends Fragment {
+public class SendFragmentElev extends Fragment {
 
-    private SendViewModel sendViewModel;
+    private SendViewModelElev sendViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         sendViewModel =
-                ViewModelProviders.of(this).get(SendViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_send, container, false);
+                ViewModelProviders.of(this).get(SendViewModelElev.class);
+        View root = inflater.inflate(R.layout.fragment_elev_send, container, false);
         final TextView textView = root.findViewById(R.id.text_send);
         sendViewModel.getText().observe(this, new Observer<String>() {
             @Override

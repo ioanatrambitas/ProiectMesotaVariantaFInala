@@ -5,12 +5,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.text.format.DateFormat;
 import android.view.View;
-import android.view.textclassifier.ConversationAction;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -18,9 +15,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 //import com.example.proiectmesotavariantafinala.Logare;
-import com.example.proiectmesotavariantafinala.R;
-//import com.example.proiectmesotavariantafinala.ui.gallery.GalleryFragment;
-//import com.example.proiectmesotavariantafinala.ui.home.HomeFragment;
+//import com.example.proiectmesotavariantafinala.ui.gallery.CatalogFragmentElev;
+//import com.example.proiectmesotavariantafinala.ui.home.AcasaFragmentElev;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -30,11 +26,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.firestore.auth.User;
-
-import java.text.Format;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
     EditText vNume,vEmail,vParola,vCNP;
@@ -46,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     DatabaseReference ref;
     String s;
 
-    Elev user = new Elev();
+    ElevAdaptor user = new ElevAdaptor();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,6 +1,5 @@
-package com.example.proiectmesotavariantafinala.ui.gallery;
+package com.example.proiectmesotavariantafinala.ui.catalogElev;
 
-import android.R.layout;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +8,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Spinner;
-import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
@@ -26,7 +24,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class GalleryFragment extends Fragment {
+public class CatalogFragmentElev extends Fragment {
     Spinner spinnerElev, spinnerMaterie;
     ListView listViewNote;
     Button btnAfiseazaNota;
@@ -37,15 +35,15 @@ public class GalleryFragment extends Fragment {
     ValueEventListener listenerElev, listenerMaterie, listenerNota;
 
     ArrayAdapter<String> adapterElev, adapterMaterie, adapterNote;
-   private ArrayList<String> listElev, listMaterie, listNote;
+    ArrayList<String> listElev, listMaterie, listNote;
 
-    private GalleryViewModel galleryViewModel;
+    private CatalogModelElev galleryViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         galleryViewModel =
-                ViewModelProviders.of(this).get(GalleryViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_gallery, container, false);
+                ViewModelProviders.of(this).get(CatalogModelElev.class);
+        View root = inflater.inflate(R.layout.fragment_elev_catalog, container, false);
 
         spinnerElev=root.findViewById(R.id.spinnerElev);
         spinnerMaterie=root.findViewById(R.id.spinnerMaterie);

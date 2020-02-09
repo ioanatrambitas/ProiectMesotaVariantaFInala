@@ -1,4 +1,4 @@
-package com.example.proiectmesotavariantafinala.ui.share;
+package com.example.proiectmesotavariantafinala.ui.shareElev;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,15 +14,15 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.proiectmesotavariantafinala.R;
 
-public class ShareFragment extends Fragment {
+public class ShareFragmentElev extends Fragment {
 
-    private ShareViewModel shareViewModel;
+    private ShareViewModelElev shareViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         shareViewModel =
-                ViewModelProviders.of(this).get(ShareViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_share, container, false);
+                ViewModelProviders.of(this).get(ShareViewModelElev.class);
+        View root = inflater.inflate(R.layout.fragment_elev_share, container, false);
         final TextView textView = root.findViewById(R.id.text_share);
         shareViewModel.getText().observe(this, new Observer<String>() {
             @Override

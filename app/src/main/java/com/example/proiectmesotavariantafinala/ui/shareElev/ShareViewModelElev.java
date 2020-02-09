@@ -1,14 +1,14 @@
-package com.example.proiectmesotavariantafinala.ui.share;
+package com.example.proiectmesotavariantafinala.ui.shareElev;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class ShareViewModel extends ViewModel {
+public class ShareViewModelElev extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public ShareViewModel() {
+    public ShareViewModelElev() {
         mText = new MutableLiveData<>();
         mText.setValue("This is share fragment");
     }

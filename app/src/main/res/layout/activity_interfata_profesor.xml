@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".InterfataProfesor">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="400dp"
+        android:layout_height="75dp"
+        android:orientation="vertical"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/bCatalog"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="20dp"
+            android:layout_toStartOf="@+id/bLectii"
+            android:onClick="btn"
+            android:text="Catalog" />
+
+        <Button
+            android:id="@+id/bLectii"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="20dp"
+            android:layout_toStartOf="@+id/bTeme"
+            android:onClick="btn2"
+            android:text="Lectii" />
+
+        <Button
+            android:id="@+id/bTeme"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="20dp"
+            android:onClick="btn3"
+            android:text="Teme" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/frameCatalog"
+        android:layout_width="400dp"
+        android:layout_height="540dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.7"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Catalog"
+                android:textAlignment="center"
+                android:textSize="44dp" />
+
+            <EditText
+                android:id="@+id/editElev"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_above="@+id/buttonElev"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="75dp"
+                android:layout_marginBottom="4dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Name și prenume" />
+
+            <Button
+                android:id="@+id/buttonElev"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_above="@+id/editMaterie"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="144dp"
+                android:layout_marginBottom="0dp"
+                android:text="Adaugă elev"
+                android:onClick="adaugaElev"/>
+
+            <EditText
+                android:id="@+id/editMaterie"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_above="@+id/buttonMaterie"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="77dp"
+                android:layout_marginBottom="0dp"
+                android:ems="10"
+                android:hint="Materie"
+                android:inputType="textPersonName"
+               />
+
+            <Button
+                android:id="@+id/buttonMaterie"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_above="@+id/spinnerElev"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="123dp"
+                android:layout_marginBottom="16dp"
+                android:text="Adauga materie"
+                android:onClick="adaugaMaterie"/>
+
+            <Spinner
+                android:id="@+id/spinnerElev"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_above="@+id/spinnerMaterie"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="11dp" />
+
+            <Spinner
+                android:id="@+id/spinnerMaterie"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_above="@+id/editNota"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="0dp" />
+
+            <EditText
+                android:id="@+id/editNota"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_above="@+id/buttonNota"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="90dp"
+                android:layout_marginBottom="14dp"
+                android:ems="10"
+                android:hint="notă"
+                android:inputType="textPersonName"
+               />
+
+            <Button
+                android:id="@+id/buttonNota"
+                android:layout_width="293dp"
+                android:layout_height="45dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="8dp"
+                android:text="Adaugă notă"
+                android:textAlignment="center"
+                android:textSize="22dp"
+                android:onClick="adaugaNota"/>
+
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLectii"
+        android:layout_width="400dp"
+        android:layout_height="540dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.7"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lectii"
+            android:textAlignment="center"
+            android:textSize="44dp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameTeme"
+        android:layout_width="400dp"
+        android:layout_height="540dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.7"
+        android:visibility="invisible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Teme"
+                android:textAlignment="center"
+                android:textSize="44dp" />
+
+            <Button
+                android:id="@+id/selectFile"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_above="@+id/notification"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="108dp"
+                android:layout_marginEnd="112dp"
+                android:layout_marginBottom="16dp"
+                android:text="Selecteaza Fisier"
+                app:layout_constraintBottom_toTopOf="@+id/notification"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.503"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.472" />
+
+            <TextView
+                android:id="@+id/notification"
+                android:layout_width="249dp"
+                android:layout_height="49dp"
+                android:layout_above="@+id/nameFile"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="65dp"
+                android:layout_marginBottom="23dp"
+                android:text="Selecteaza un fisier"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toTopOf="@+id/spinnerUpload"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/upload"
+                android:layout_width="137dp"
+                android:layout_height="38dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="128dp"
+                android:layout_marginBottom="42dp"
+                android:text="Incarcare"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.532"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/nameFile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/spinnerUpload"
+                android:layout_marginStart="108dp"
+                android:layout_marginBottom="27dp"
+                android:ems="10"
+                android:hint="Introduceti numele fisierului"
+                android:inputType="textPersonName"
+                app:layout_constraintBottom_toTopOf="@+id/upload"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Spinner
+                android:id="@+id/spinnerUpload"
+                android:layout_width="337dp"
+                android:layout_height="45dp"
+                android:layout_above="@+id/upload"
+                android:layout_marginStart="36dp"
+                android:layout_marginBottom="97dp"
+                app:layout_constraintBottom_toTopOf="@+id/nameFile"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent" />
+        </RelativeLayout>
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

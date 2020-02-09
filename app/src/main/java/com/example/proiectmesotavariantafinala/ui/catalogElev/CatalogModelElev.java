@@ -1,16 +1,16 @@
-package com.example.proiectmesotavariantafinala.ui.send;
+package com.example.proiectmesotavariantafinala.ui.catalogElev;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class SendViewModel extends ViewModel {
+public class CatalogModelElev extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public SendViewModel() {
+    public CatalogModelElev() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is send fragment");
+        mText.setValue("This is gallery fragment");
     }
 
     public LiveData<String> getText() {

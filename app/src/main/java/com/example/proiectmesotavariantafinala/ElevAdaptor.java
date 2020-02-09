@@ -1,6 +1,6 @@
 package com.example.proiectmesotavariantafinala;
 
-public class Elev {
+public class ElevAdaptor {
 
     private String Name;
     private String CNP;
@@ -9,14 +9,14 @@ public class Elev {
 
 
 
-    public Elev(String name, String cnp, String email, String password) {
+    public ElevAdaptor(String name, String cnp, String email, String password) {
         Name = name;
         CNP = cnp;
         Email = email;
         Password = password;
     }
 
-    public Elev() {
+    public ElevAdaptor() {
 
     }
 
